@@ -26,7 +26,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", index).Methods(http.MethodGet)
 
-    // add logger middleware
+        // add logger middleware
 	r.Use(muxlogrus.NewLogger().Middleware)
 
 	address := ":8990"
